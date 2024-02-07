@@ -1,6 +1,6 @@
 ## About The Project
 
-PROJECT E-VOTING
+PROJECT PTS WEB KELAS 11 - BY KELOMPOK 5
 
 ### Built With [ LARAVEL & TAILWIND ]
 
@@ -35,6 +35,3 @@ Untuk mengaktifkan dan menjalankan salinan lokal, ikuti langkah-langkah contoh s
 
 ### DON'T FORGET TO CHANGE THE .ENV | JANGAN LUPA UNTUK MENGGANTI .ENV NYA
 
-
-### TEAM CREATE PROJECT
-* Rasya Dika Pratama & Sofwan Nuha Al Faruq
