@@ -2,6 +2,13 @@
 
 PROJECT PTS WEB KELAS 11 - BY KELOMPOK 5
 
+Diva Salsabila
+Eko Rifki Setyawan
+Rafi Oktarino Ramadhan
+Rasya Dika Pratama
+Rifky Prasetyo
+Zulfania Zafira Choerunnisa
+
 ### Built With [ LARAVEL & TAILWIND ]
 
 ## Getting Started
