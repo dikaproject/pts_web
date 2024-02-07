@@ -27,7 +27,7 @@ Untuk mengaktifkan dan menjalankan salinan lokal, ikuti langkah-langkah contoh s
   ```sh
   php artisan migrate
   ```
-  * Database seed
+* Database seed
   ```sh
   php artisan db:seed
   ```
