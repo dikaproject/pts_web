@@ -2,12 +2,12 @@
 
 PROJECT PTS WEB KELAS 11 - BY KELOMPOK 5
 
-Diva Salsabila
-Eko Rifki Setyawan
-Rafi Oktarino Ramadhan
-Rasya Dika Pratama
-Rifky Prasetyo
-Zulfania Zafira Choerunnisa
+* Diva Salsabila
+* Eko Rifki Setyawan
+* Rafi Oktarino Ramadhan
+* Rasya Dika Pratama ( ketua kelompok )
+* Rifky Prasetyo
+* Zulfania Zafira Choerunnisa
 
 ### Built With [ LARAVEL & TAILWIND ]
 
@@ -27,6 +27,10 @@ Untuk mengaktifkan dan menjalankan salinan lokal, ikuti langkah-langkah contoh s
   ```sh
   php artisan migrate
   ```
+  * Database seed
+  ```sh
+  php artisan db:seed
+  ```
 * npm
   ```sh
   npm install 
@@ -41,4 +45,5 @@ Untuk mengaktifkan dan menjalankan salinan lokal, ikuti langkah-langkah contoh s
   ```
 
 ### DON'T FORGET TO CHANGE THE .ENV | JANGAN LUPA UNTUK MENGGANTI .ENV NYA
+### RENAME YANG TADINYA FILE .ENV.EXAMPLE MENJADI .ENV AJA
 
