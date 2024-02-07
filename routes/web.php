@@ -1,9 +1,10 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\TaskController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AdminUserController;
+use App\Http\Controllers\Admin\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -61,4 +62,9 @@ Route::middleware(['admin'])->group(function () {
     Route::get('/admin/kelolauser/{user}/edit', [AdminUserController::class, 'edit'])->name('admin.kelolauser.edit');
     Route::put('/admin/kelolauser/{user}', [AdminUserController::class, 'update'])->name('admin.kelolauser.update');
     Route::delete('/admin/kelolauser/{user}', [AdminUserController::class, 'destroy'])->name('admin.kelolauser.destroy');
+});
+
+/* task routes */
+Route::middleware(['auth'])->group(function () {
+    Route::resource('tasks', TaskController::class);
 });
