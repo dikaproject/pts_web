@@ -67,4 +67,6 @@ Route::middleware(['admin'])->group(function () {
 /* task routes */
 Route::middleware(['auth'])->group(function () {
     Route::resource('tasks', TaskController::class);
+    Route::put('/tasks/{task}/updatestatus', [TaskController::class, 'updateStatus'])->name('tasks.updatestatus');
+    Route::put('/tasks/updateorder', [App\Http\Controllers\TaskController::class, 'updateorder'])->name('tasks.updateorder');
 });
