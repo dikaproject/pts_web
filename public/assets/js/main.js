@@ -10,14 +10,14 @@ window.addEventListener('load', () => {
 })
 
 
-// Animation when scroll 
+// Animation when scroll
 ScrollReveal({
   distance: '200px',
   duration: 1000,
   delay: 500,
 })
 
-// Scroll bottom to top 
+// Scroll bottom to top
 ScrollReveal().reveal('.scroll-bottom-to-top1', { delay: 200, origin: 'bottom' })
 ScrollReveal().reveal('.scroll-bottom-to-top2', { delay: 300, origin: 'bottom' })
 ScrollReveal().reveal('.scroll-bottom-to-top3', { delay: 400, origin: 'bottom' })
@@ -39,7 +39,7 @@ ScrollReveal().reveal('.scroll-right-to-left2', { delay: 300, origin: 'right' })
 ScrollReveal().reveal('.scroll-right-to-left3', { delay: 400, origin: 'right' })
 ScrollReveal().reveal('.scroll-right-to-left4', { delay: 500, origin: 'right' })
 
-// Text slide animation bottom to top 
+// Text slide animation bottom to top
 ScrollReveal().reveal('.text-scroll-bottom-to-top1', { delay: 400, origin: 'bottom' })
 ScrollReveal().reveal('.text-scroll-bottom-to-top2', { delay: 600, origin: 'bottom' })
 ScrollReveal().reveal('.text-scroll-bottom-to-top3', { delay: 800, origin: 'bottom' })
@@ -100,7 +100,7 @@ const disablePopupNewsletter = () => {
 const enablepopupNewsletter = () => {
   // 1. Remove the class from the body
   document.body.classList.remove('prevent-popupNewsletter');
-  // 2. Update popupNewsletter in localStorage 
+  // 2. Update popupNewsletter in localStorage
   localStorage.setItem('popupNewsletter', null);
 }
 
@@ -120,7 +120,7 @@ if (preventPopupInput) {
     // if it not current prevent, enable it
     if (preventPopupInput.checked) {
       disablePopupNewsletter();
-      // if it has been prevent, turn it off  
+      // if it has been prevent, turn it off
     } else {
       enablepopupNewsletter();
     }
@@ -208,7 +208,7 @@ if (chatInput) {
 }
 
 const createChatLi = (message, className) => {
-  // Create a chat <li> element 
+  // Create a chat <li> element
   const chatLi = document.createElement('li')
   chatLi.classList.add('chat', className)
   let chatContent = `<p></p>`
@@ -218,38 +218,6 @@ const createChatLi = (message, className) => {
 }
 
 // If you want to answer the right question,
-// change API Key on your OpenAI account 
-const generateResponse = (incomingChatLi) => {
-  const API_URL = 'https://api.openai.com/v1/chat/completions'
-  const messageResponse = incomingChatLi.querySelector('p');
-
-  const requestOptions = {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      "Authorization": `Bearer ${API_KEY}`
-    },
-    body: JSON.stringify({
-      model: "gpt-3.5-turbo",
-      messages: [
-        {
-          role: "user",
-          content: userMessage
-        }
-      ]
-    })
-  }
-
-  // Send POST request to API, get response
-  fetch(API_URL, requestOptions)
-    .then(res => res.json())
-    .then(data => {
-      messageResponse.textContent = data.choices[0].message.content
-    })
-    .catch(error => {
-      messageResponse.textContent = 'Answer: ' + userMessage
-    })
-}
 
 const handleChat = () => {
   userMessage = chatInput.value.trim()
@@ -338,7 +306,7 @@ const nextBtn = document.querySelector('.testimonial-block.style-one .list-avata
 const listCmt = document.querySelector('.testimonial-block.style-one .list-comment')
 const commentItems = document.querySelectorAll('.testimonial-block.style-one .list-comment .cmt-item')
 
-// Listen event click prev btn 
+// Listen event click prev btn
 if (prevBtn) {
   prevBtn.addEventListener('click', () => {
     commentItems.forEach(item => {
@@ -354,7 +322,7 @@ if (prevBtn) {
   })
 }
 
-// Listen event click next btn 
+// Listen event click next btn
 if (nextBtn) {
   nextBtn.addEventListener('click', () => {
     commentItems.forEach(item => {
@@ -370,7 +338,7 @@ if (nextBtn) {
   })
 }
 
-// Listen event slide list avatar 
+// Listen event slide list avatar
 const slickList = document.querySelector('.testimonial-block.style-one .list-avatar .slick-list')
 
 if (slickList) {
