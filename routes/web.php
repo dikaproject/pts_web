@@ -18,7 +18,7 @@ use App\Http\Controllers\Admin\AdminController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 Route::get('/admin', function () {
@@ -66,7 +66,18 @@ Route::middleware(['admin'])->group(function () {
 
 /* task routes */
 Route::middleware(['auth'])->group(function () {
+    // CRUD Task Disini menggunakan resource route agar lebih mudah dan efisien
     Route::resource('tasks', TaskController::class);
+
+    // Update Status Task Disini menggunakan route put agar lebih efisien
     Route::put('/tasks/{task}/updatestatus', [TaskController::class, 'updateStatus'])->name('tasks.updatestatus');
     Route::put('/tasks/updateorder', [App\Http\Controllers\TaskController::class, 'updateorder'])->name('tasks.updateorder');
+});
+
+
+Route::get('/about', function () {
+    return view('pages.about');
+});
+Route::get('/home', function () {
+    return view('pages.index');
 });
